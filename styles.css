@@ -95,6 +95,7 @@ body{
     #openmenu a{
         display: block;
         font-size: 30px;
+        margin-bottom: 8px;
     }
     #openmenu a:first-of-type{
         margin-bottom: 20px;
