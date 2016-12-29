@@ -1,0 +1,162 @@
+#mobilemenu{
+    display: none;
+}
+p{
+    font-family: 'Raleway', sans-serif;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+h1{
+    font-family: 'Amatic SC', cursive;
+}
+nav{
+    position: fixed;
+    top: 0;
+    background-color: rgba(40,45,40,0.7);
+    color: #fff;
+    padding: 20px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 20px;
+    width: calc(100% - 40px);
+}
+nav a{
+    padding: 5px;
+}
+nav a:not(:first-of-type){
+    float: right;
+    margin-right: 25px;
+}
+nav a:nth-of-type(2){
+    border: 1px solid #fff;
+    border-radius: 2px;
+    margin-right: 5%;
+}
+#welcome{
+    position: fixed;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    margin-top: -70px;
+    margin-left: -200px;
+    background-color: rgba(40,45,40,0.7);
+    padding: 20px;
+    padding-top: 0; 
+    color: #fff;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+#bottom{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+body{
+    background-color: #000;
+    margin: 0;
+}
+@media (max-width: 767px) {
+    nav{display: none;}
+    #mobilemenu{
+        display: block;
+        color: #fff; 
+        text-align: center;
+        font-family: 'Amatic SC', cursive;
+        font-size: 40px;
+        margin-top: 10px;
+    }
+    #welcome{
+        width: calc(80% - 40px);
+        position: fixed;
+        top: 30%;
+        left: 0;
+        margin: 0 0 0 10%;
+        padding-bottom: 0;
+    }
+     .fullscreen-bg {
+        background: url('nl.jpg') center center / cover no-repeat;
+    }
+    .fullscreen-bg__video {
+        display: none;
+    }
+}
+/*--------------------------------------------*/
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+.fullscreen-bg:nth-of-type(2){
+    background-color: rgba(0, 0, 0, 0.2);
+    /* IE9, iOS 3.2+ */
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjEwMCUiIHgyPSIwJSIgeTI9IjAlIj48c3RvcCBzdG9wLWNvbG9yPSIjMDAwMTAxIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMCIgb2Zmc2V0PSIwLjgwNzk5OTk5OTk5OTk5OTkiLz48c3RvcCBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAiIG9mZnNldD0iMC44MDc5OTk5OTk5OTk5OTk5Ii8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI3ZzZ2cpIiAvPjwvc3ZnPg==);
+    background-image: -webkit-gradient(linear, 0% 100%, 0% 0%,color-stop(0, rgb(0, 1, 1)),color-stop(0.808, rgba(0, 0, 0, 0)),color-stop(0.808, rgba(0, 0, 0, 0)));
+    /* Android 2.3 */
+    background-image: -webkit-linear-gradient(bottom,rgb(0, 1, 1) 0%,rgba(0, 0, 0, 0) 80.8%,rgba(0, 0, 0, 0) 80.8%);
+    /* IE10+ */
+    background-image: linear-gradient(to top,rgb(0, 1, 1) 0%,rgba(0, 0, 0, 0) 80.8%,rgba(0, 0, 0, 0) 80.8%);
+    background-image: -ms-linear-gradient(bottom,rgb(0, 1, 1) 0%,rgba(0, 0, 0, 0) 80.8%,rgba(0, 0, 0, 0) 80.8%);
+}
+/* IE8- CSS hack */
+@media \0screen\,screen\9 {
+    .fullscreen-bg:nth-of-type(2) {
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000000",endColorstr="#ff000101",GradientType=0);
+    }
+}
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    max-height: 80%;
+    -webkit-transform: translate(-50%, 0);
+       -moz-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+}
+#bars {
+    display: inline-block;
+    cursor: pointer;
+    position: fixed;
+    top: 18px;
+    right: 20px;
+    z-index: 100;
+    width: 35px;
+    height: 30px;
+    background-color: rgba(40,45,40,0.7);
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    padding-top: 5px;
+}
+#bar1, #bar2, #bar3 {
+    width: 18px;
+    height: 3px;
+    background-color: #bbb;
+    margin: 4px auto;
+    transition: 0.4s;
+}
+.change #bar1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 5px) ;
+    transform: rotate(-45deg) translate(-5px, 5px) ; /*-ll+ur,-ul+lr*/
+}
+.change #bar2 {
+    opacity: 0;
+}
+.change #bar3 {
+    -webkit-transform: rotate(45deg) translate(-5px, -5px) ;
+    transform: rotate(45deg) translate(-5px, -5px) ;
+}
+
+
+
+
+
+
+
