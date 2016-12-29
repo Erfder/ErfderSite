@@ -17,17 +17,23 @@
 
 
 <nav>
-	<a href="home.html">Image will go here</a>
+	<a href="index.html">Image will go here</a>
 	<a href="">Contact</a>
 	<a href="">About</a>
 	<a href="">Work</a>
 </nav>
 <header id="mobilemenu">
-	<a href="home.html">Erfder Enterprises</a>
-	<div id="bars" onclick="menu(this)">
+	<a href="index.html">Erfder Enterprises</a>
+	<div id="bars" onclick="menu()">
 	  <div id="bar1"></div>
 	  <div id="bar2"></div>
 	  <div id="bar3"></div>
+	</div>
+	<div id="openmenu" class="hiid">
+		<a href="index.html">Erfder Enterprises</a>
+		<a href="">Contact</a>
+		<a href="">About</a>
+		<a href="">Work</a>
 	</div>
 </header>
 
@@ -40,8 +46,9 @@
 
 
 <script type="text/javascript">
-function menu(x) {
-    x.classList.toggle("change");
+function menu() {
+    document.getElementById("bars").classList.toggle("change");
+    document.getElementById("openmenu").classList.toggle("hiid");
 }</script>
 </body>
 
