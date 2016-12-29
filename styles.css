@@ -80,6 +80,9 @@ body{
     .fullscreen-bg__video {
         display: none;
     }
+    #bottom{
+        content:url("landscape-1sm.png");
+    }
 }
 /*--------------------------------------------*/
 .fullscreen-bg {
