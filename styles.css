@@ -48,6 +48,10 @@ nav a:nth-of-type(2){
     text-align: center;
     border: 1px solid #ddd;
 }
+#cont{
+        background: url('grandcanyon.jpg') center center / cover no-repeat;
+        filter: blur(.7px);
+    }
 #contact{
     position: fixed;
     width: 640px;
@@ -56,7 +60,7 @@ nav a:nth-of-type(2){
     left: 10%;
     margin-top: -70px;
     background: url("feather.png") no-repeat center;
-    padding-top: 30px; 
+    padding-top: 70px; 
     color: #fff;
     text-align: center;
     animation: swoop 1.5s 1;
@@ -71,6 +75,25 @@ nav a:nth-of-type(2){
 0% {rotate:4deg; scale(1) skew(1deg) translate(10px) opacity(0); }
 100% {rotate:0deg; scale(0.891) skew(1deg) translate(-3px) opacity(1); }
 }*/
+#contact2{
+    position: fixed;
+    width: 512px;
+    height: 113px;
+    top: 65%;
+    left: 30%;
+    margin-top: -70px;
+    background: url("featherrev.png") no-repeat center;
+    padding-top: 50px; 
+    color: #fff;
+    text-align: center;
+    animation: swooptwo 1.5s 1;
+    animation-timing-function: ease-out;
+    transform: rotate(7deg);
+}
+@keyframes swooptwo{
+    from{left: 80%; top: 50%; transform: rotate(-7deg); opacity: 0.3;}
+    to{left: 30%; top: 65%; transform: rotate(7deg); opacity: 1;}
+}
 #bottom{
     width: 100%;
     position: fixed;
@@ -83,9 +106,11 @@ nav a:nth-of-type(2){
     width: 40%;
     z-index: 60;
 }
-#openletter{
-    text-decoration: underline;
+.openletter{
     cursor: pointer;
+    font-family: 'Oswald';
+    font-weight: 100;
+    font-size: 21px;
 }
 body{
     background-color: #000;
@@ -113,12 +138,28 @@ body{
         padding-bottom: 0;
     }
     #contact{
-        top: 30%;
+        top: 25%;
         left: -180px;
         margin: 0 0 0 10%;
         padding-bottom: 0;
     }
-     .fullscreen-bg {
+    @keyframes swoop{
+        from{left: -30%; top: 0%; transform: rotate(40deg); opacity: 0.3;}
+        to{left: -180px; top: 25%; transform: rotate(-10deg); opacity: 1;}
+    }
+    #contact2{
+        top: 60%;
+        left: -110px;
+        margin: 0 0 0 10%;
+        padding-bottom: 0;
+        text-align: left;
+        padding-left: 190px;
+    }
+    @keyframes swooptwo{
+        from{left: 30%; top: 50%; transform: rotate(-7deg); opacity: 0.3;}
+        to{left: -110px; top: 60%; transform: rotate(7deg); opacity: 1;}
+    }
+    #bghome{
         background: url('nl.jpg') center center / cover no-repeat;
     }
     .fullscreen-bg__video {
@@ -137,8 +178,8 @@ body{
     }
     #openmenu a{
         display: block;
-        font-size: 30px;
         margin-bottom: 8px;
+        font-size: 30px;
     }
     #openmenu a:first-of-type{
         margin-bottom: 20px;

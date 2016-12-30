@@ -1,18 +1,17 @@
 <head>
 	<meta name="viewport" content="width=device-width" />
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 
-<body>
-<div class="fullscreen-bg">
-    <img src="grandcanyon.jpg">
+<body onmousemove="update(event)">
+<div class="fullscreen-bg" id="cont">
 </div>
 <img src="crow.png" id="crow">
 
 
-<nav>
+<nav  style="background-color: rgba(40,45,40,0.3);">
 	<a href="index.html">Image will go here</a>
 	<a href="contact.html">Contact</a>
 	<a href="">About Me</a>
@@ -34,12 +33,14 @@
 </header>
 
 <div id="contact">
-	<h1 id="openletter">Write me a letter</h1>
+	<h1 class="openletter">Request website development</h1>
 </div>
-
+<div id="contact2">
+	<h1 class="openletter">Write me a message</h1>
+</div>
 <script type="text/javascript">
 function menu() {
     document.getElementById("bars").classList.toggle("change");
     document.getElementById("openmenu").classList.toggle("hiid");
-}</script>
+};</script>
 </body>
