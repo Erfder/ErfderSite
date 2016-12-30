@@ -20,6 +20,7 @@ nav{
     font-family: 'Amatic SC', cursive;
     font-size: 20px;
     width: calc(100% - 40px);
+    z-index: 100;
 }
 nav a{
     padding: 5px;
@@ -47,16 +48,53 @@ nav a:nth-of-type(2){
     text-align: center;
     border: 1px solid #ddd;
 }
+#contact{
+    position: fixed;
+    width: 640px;
+    height: 141px;
+    top: 40%;
+    left: 10%;
+    margin-top: -70px;
+    background: url("feather.png") no-repeat center;
+    padding-top: 30px; 
+    color: #fff;
+    text-align: center;
+    animation: swoop 1.5s 1;
+    animation-timing-function: ease-out;
+    transform: rotate(-10deg);
+}
+@keyframes swoop{
+    from{left: -30%; top: 0%; transform: rotate(40deg); opacity: 0.3;}
+    to{left: 10%; top: 40%; transform: rotate(-10deg); opacity: 1;}
+}
+/*@-webkit-keyframes swoop {
+0% {rotate:4deg; scale(1) skew(1deg) translate(10px) opacity(0); }
+100% {rotate:0deg; scale(0.891) skew(1deg) translate(-3px) opacity(1); }
+}*/
 #bottom{
     width: 100%;
     position: fixed;
     bottom: 0;
 }
+#crow{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 40%;
+    z-index: 60;
+}
+#openletter{
+    text-decoration: underline;
+    cursor: pointer;
+}
 body{
     background-color: #000;
     margin: 0;
 }
-@media (max-width: 767px) {
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+@media (max-width: 768px) {
     nav{display: none;}
     #mobilemenu{
         display: block;
@@ -74,6 +112,12 @@ body{
         margin: 0 0 0 10%;
         padding-bottom: 0;
     }
+    #contact{
+        top: 30%;
+        left: -180px;
+        margin: 0 0 0 10%;
+        padding-bottom: 0;
+    }
      .fullscreen-bg {
         background: url('nl.jpg') center center / cover no-repeat;
     }
@@ -87,7 +131,6 @@ body{
         position: fixed;
         top: 0;
         padding-top: 10px;
-        background-color: rgba(40,45,40,1);
         height: 240px;
         width: 100%;
         z-index: 99;
@@ -101,7 +144,10 @@ body{
         margin-bottom: 20px;
         font-size: 40px;
     }
+    #crow{width: 60%;}
 }
+/*--------------------------------------------*/
+/*--------------------------------------------*/
 /*--------------------------------------------*/
 .fullscreen-bg {
     position: fixed;
@@ -111,6 +157,10 @@ body{
     left: 0;
     overflow: hidden;
     z-index: -100;
+}
+.fullscreen-bg img{
+    min-width: 100%;
+    min-height: 100%;
 }
 .fullscreen-bg:nth-of-type(2){
     background-color: rgba(0, 0, 0, 0.2);
@@ -129,7 +179,7 @@ body{
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000000",endColorstr="#ff000101",GradientType=0);
     }
 }
-.fullscreen-bg__video {
+.fullscreen-bg__video{
     position: absolute;
     top: 0;
     left: 50%;
@@ -138,9 +188,9 @@ body{
     min-width: 100%;
     max-height: 80%;
     -webkit-transform: translate(-50%, 0);
-       -moz-transform: translate(-50%, 0);
-        -ms-transform: translate(-50%, 0);
-        transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
 }
 #bars {
     display: inline-block;
